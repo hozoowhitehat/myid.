@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visitor Logger</title>
+  <script>
+    async function logVisitor() {
+      const width = window.screen.width;
+      const height = window.screen.height;
+      const colorDepth = window.screen.colorDepth;
+      const pageLoadTime = performance.now();
+
+      const response = await fetch(`http://your-server-url/?width=${width}&height=${height}&colorDepth=${colorDepth}&pageLoadTime=${pageLoadTime}`);
+      const text = await response.text();
+      console.log(text);
+    }
+
+    logVisitor();
+  </script>
+</head>
+<body>
+  <h1>HALO BRO LU KEK KONTOL 😹</h1>
+</body>
+</html>
